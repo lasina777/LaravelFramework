@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,3 +100,20 @@ Route::get('admin/web', function () {
 Route::get('/color/{hex}', function ($hex){
     return "Цвет: #{$hex}";
 })->where(['hex'=>'[0-9A-F]{6}']);
+
+//praktika na 28.04.22
+// 1 часть задания 1-6
+Route::get('zadanie1', [TestController::class, 'zadanie1']);
+Route::get('zadanie2', [TestController::class, 'zadanie2']);
+Route::get('zadanie3', [TestController::class, 'zadanie3']);
+Route::get('zadanie4', [TestController::class, 'zadanie4']);
+Route::get('zadanie5', [TestController::class, 'zadanie5']);
+Route::get('zadanie6', [TestController::class, 'zadanie6']);
+
+// 2 часть задания 1-6
+Route::get('template', [TestController::class, 'lessonTemplateOne']);
+Route::get('template2/{organization}', [TestController::class, 'lessonTemplateTwo']);
+Route::get('template3/{srtname}', [TestController::class, 'lessonTemplateThree']);
+Route::get('template4', [TestController::class, 'lessonTemplateFour']);
+Route::get('template5', [TestController::class, 'lessonTemplateFive']);
+Route::get('template6', [TestController::class, 'lessonTemplateSix']);
