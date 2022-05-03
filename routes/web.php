@@ -13,7 +13,7 @@ use \App\Http\Controllers\TestController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 })->name('main');
@@ -117,3 +117,9 @@ Route::get('template3/{srtname}', [TestController::class, 'lessonTemplateThree']
 Route::get('template4', [TestController::class, 'lessonTemplateFour']);
 Route::get('template5', [TestController::class, 'lessonTemplateFive']);
 Route::get('template6', [TestController::class, 'lessonTemplateSix']);
+*/
+//praktika 03.05.22
+Route::view('/', "main")->name("Главная");
+Route::view('/News', "New")->name("Новость");
+Route::view('/aut', "login")->name("Авторизация");
+Route::view('/ls', "Personal")->name("Личный кабинет");
